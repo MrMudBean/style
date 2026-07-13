@@ -1,0 +1,12 @@
+
+node_modules
+dist
+*.tgz
+*.zip
+coverage
+.DS_Store
+.eg
+
+# 由 src/css 构建而来
+src/css.ts
+src/reset-css.ts

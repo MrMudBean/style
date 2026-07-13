@@ -1,0 +1,38 @@
+.vvi-flex,
+.vvi-flex-row,
+.vvi-flex-column,
+.vvi-flex-row-reverse,
+.vvi-flex-column-reverse {
+  display: flex;
+  flex-wrap: nowrap;
+  flex: 1;
+}
+
+.vvi-flex,
+.vvi-flex-row {
+  flex-direction: row;
+}
+
+.vvi-flex-row-reverse {
+  flex-direction: row-reverse;
+}
+
+.vvi-flex-column {
+  flex-direction: column;
+}
+
+.vvi-flex-column-reverse {
+  flex-direction: column-reverse;
+}
+
+.vvi-flex-wrap {
+  flex-wrap: wrap;
+}
+
+.vvi-flex-nowrap {
+  flex-wrap: nowrap;
+}
+
+.vvi-flex-warp-reverse {
+  flex-wrap: wrap-reverse;
+}

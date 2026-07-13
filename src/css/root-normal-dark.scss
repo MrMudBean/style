@@ -1,0 +1,85 @@
+@use './vars-color.scss' as color;
+
+@mixin dark {
+  // 主要文本色（正文、标题）
+  --vvi-text-primary: var(--vvi-beige);
+  --vvi-text-primary-rgb: var(--vvi-beige-rgb);
+  // 次要文本色（辅助说明）
+  --vvi-text-secondary: var(--vvi-darkness-20);
+  --vvi-text-secondary-rgb: var(--vvi-darkness-20-rgb);
+  // 备注、浇注的文本色
+  --vvi-text-tertiary: var(--vvi-darkness-40);
+  --vvi-text-tertiary-rgb: var(--vvi-darkness-40-rgb);
+  --vvi-text-active: var(--vvi-darkness-50);
+  --vvi-text-active-rgb: var(--vvi-darkness-50-rgb);
+  --vvi-text-inactive: rgba(var(--vvi-darkness-20-rgb), 0.76);
+  --vvi-text-inactive-rgb: var(--vvi-darkness-20-rgb);
+  --vvi-text-link: var(--vvi-blue-30);
+  --vvi-text-link-rgb: var(--vvi-blue-30-rgb);
+  --vvi-text-invert: var(--vvi-darkness-90); // 文本反转色
+  --vvi-text-invert-rgb: var(--vvi-darkness-90-rgb); // 文本反转色
+  --vvi-text-muted: var(--vvi-darkness-60); // 温和文本色
+  --vvi-text-muted-rgb: var(--vvi-darkness-60-rgb); // 温和文本色
+  // 背景色
+  --vvi-background-primary: var(--vvi-darkness-90);
+  --vvi-background-primary-rgb: var(--vvi-darkness-90-rgb);
+  --vvi-background-secondary: var(--vvi-darkness-75);
+  --vvi-background-secondary-rgb: var(--vvi-darkness-75-rgb);
+  --vvi-background-tertiary: var(--vvi-darkness-60);
+  --vvi-background-tertiary-rgb: var(--vvi-darkness-60-rgb);
+  --vvi-background-weird: var(--vvi-darkness-70);
+  --vvi-background-weird-rgb: var(--vvi-darkness-70-rgb);
+  // 边框
+  --vvi-border-primary: var(--vvi-darkness-50);
+  --vvi-border-primary-rgb: var(--vvi-darkness-50-rgb);
+  --vvi-border-secondary: var(--vvi-darkness-60);
+  --vvi-border-secondary-rgb: var(--vvi-darkness-60-rgb);
+  // 成功盒子的提示框
+  --vvi-border-success: var(--vvi-green-20);
+  --vvi-border-success-rgb: var(--vvi-green-20-rgb);
+  // 按钮
+  --vvi-button-primary: var(--vvi-darkness-10);
+  --vvi-button-primary-rgb: var(--vvi-darkness-10-rgb);
+  --vvi-button-primary-hover: var(--vvi-darkness-15);
+  --vvi-button-primary-hover-rgb: var(--vvi-darkness-15-rgb);
+  --vvi-button-primary-active: var(--vvi-darkness-30);
+  --vvi-button-primary-active-rgb: var(--vvi-darkness-30-rgb);
+  --vvi-button-primary-inactive: var(--vvi-white);
+  --vvi-button-primary-inactive-rgb: var(--vvi-white-rgb);
+  --vvi-button-secondary: var(--vvi-darkness-70);
+  --vvi-button-secondary-rgb: var(--vvi-darkness-70-rgb);
+  --vvi-button-secondary-hover: var(--vvi-darkness-50);
+  --vvi-button-secondary-hover-rgb: var(--vvi-darkness-50-rgb);
+  --vvi-button-secondary-active: var(--vvi-darkness-40);
+  --vvi-button-secondary-active-rgb: var(--vvi-darkness-40-rgb);
+  --vvi-button-secondary-inactive: var(--vvi-darkness-70);
+  --vvi-button-secondary-inactive-rgb: var(--vvi-darkness-70-rgb);
+  --vvi-button-secondary-border-focus: var(--vvi-blue-60);
+  --vvi-button-secondary-border-focus-rgb: var(--vvi-blue-60-rgb);
+  // 红框按钮
+  --vvi-button-secondary-border-red: var(--vvi-red-30);
+  --vvi-button-secondary-border-red-rgb: var(--vvi-red-30-rgb);
+  --vvi-button-secondary-border-red-focus: var(--vvi-red-10);
+  --vvi-button-secondary-border-red-focus-rgb: var(--vvi-red-10-rgb);
+  --vvi-box-shadow-light: 0 1px 2px rgba(var(--vvi-darkness-10), 0.2);
+  --vvi-box-shadow-dark: 0 1px 6px rgba(var(--vvi-darkness-10), 0.2);
+  // ios 风格的按钮组
+  --vvi-close-button: var(--vvi-close-button);
+  // 输入框
+  --vvi-input-primary-text: var(--vvi-text-primary);
+  --vvi-input-primary-text-rgb: var(--vvi-text-primary-rgb);
+  --vvi-input-primary-background: var(--vvi-darkness-80);
+  --vvi-input-primary-background-rgb: var(--vvi-darkness-80-rgb);
+  --vvi-input-primary-placeholder-text: var(--vvi-darkness-45);
+  --vvi-input-primary-focus-visible-outline: var(--vvi-green-60) outset 1.5px;
+  --vvi-input-revers-text: var(--vvi-green-30);
+  --vvi-input-revers-text-rgb: var(--vvi-green-30-rgb);
+  --vvi-input-revers-background: var(--vvi-darkness-80);
+  --vvi-input-revers-background-rgb: var(--vvi-darkness-80-rgb);
+  --vvi-input-revers-placeholder-text: var(--vvi-darkness-45);
+  --vvi-input-revers-focus-visible-outline: var(--vvi-green-80) solid 2px;
+
+  color-scheme: dark;
+  color: var(--vvi-text-primary, #f0f2e5);
+  background-color: var(--vvi-background-primary, #333333);
+}

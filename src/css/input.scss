@@ -1,0 +1,131 @@
+.vvi-input-focus-visible-none,
+input.vvi-input-focus-visible-none,
+.vvi-style input:focus-visible {
+  outline: none;
+}
+
+.vvi-style input[type='button'],
+.cursor-pointer input[type='button'].cursor-pointer {
+  cursor: pointer;
+}
+
+.vvi-input-type-text-revers,
+input[type='text'].vvi-input-type-text-revers,
+.vvi-input-type-text-primary,
+input[type='text'].vvi-input-type-text-primary,
+.vvi-style input[type='text'] {
+  width: calc(var(--vvi-spacing) * 40);
+  border-radius: var(--vvi-spacing-3);
+  padding: var(--vvi-spacing-1) var(--vvi-spacing-3);
+
+  &:focus::placeholder {
+    color: transparent;
+  }
+}
+
+.vvi-input-type-text-primary,
+input[type='text'].vvi-input-type-text-primary,
+.vvi-style input[type='text'] {
+  background-color: var(--vvi-input-primary-background);
+  color: var(--vvi-input-primary-text);
+  border-style: outset;
+
+  &::placeholder {
+    color: var(--vvi-input-primary-placeholder-text);
+  }
+
+  &:focus-visible {
+    outline: var(--vvi-input-primary-focus-visible-outline);
+    border-color: transparent;
+    box-shadow: 0 2px 24px rgba(var(--vvi-input-primary-text-rgb), 0.6);
+  }
+}
+
+input[type='text'].vvi-input-type-text-revers,
+.vvi-input-type-text-revers {
+  background-color: var(--vvi-input-revers-background);
+  color: var(--vvi-input-revers-text);
+  border-style: outset;
+
+  &::placeholder {
+    color: var(--vvi-input-revers-placeholder-text);
+  }
+
+  &:focus-visible {
+    outline: var(--vvi-input-revers-focus-visible-outline);
+    border-color: transparent;
+    box-shadow: 0 2px 12px rgba(var(--vvi-input-revers-text-rgb), 0.6);
+  }
+}
+
+.vvi-input-type-radio-primary,
+.vvi-style input[type='radio'] {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+
+  + label {
+    padding-left: 15px;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      border-radius: 50%;
+      top: 50%;
+      transform: translate(0, -50%);
+      overflow: hidden;
+    }
+
+    $with: var(--vvi-spacing-base);
+
+    // 默认/未选中的前置
+    &::before {
+      left: 0px;
+      height: $with;
+      width: $with;
+      box-shadow: 1px 1px 3px var(--vvi-text-primary);
+      z-index: 1;
+    }
+
+    // 选中的项的额外涂色
+    &::after {
+      font-size: $with;
+      line-height: $with;
+      z-index: 2;
+      left: 0px;
+      height: $with;
+      width: $with;
+      color: var(--vvi-background-primary);
+      background-color: var(--vvi-text-primary);
+      clip-path: circle(0%);
+      transition: all var(--vvi-transition-slow);
+    }
+  }
+
+  &:checked {
+    color: #f00;
+
+    & + label {
+      color: var(--vvi-green-30);
+
+      &::before {
+        box-shadow:
+          1px 1px 3px var(--vvi-green-10),
+          -1px -1px 3px var(--vvi-green-10);
+      }
+
+      &::after {
+        background-color: var(--vvi-green-30);
+        clip-path: circle(100%);
+        transition: all 0.8s;
+      }
+    }
+  }
+}
+
+.vvi-input-type-image-primary,
+.vvi-style input[type='image'] {
+  -webkit-user-select: none;
+  user-select: none;
+}

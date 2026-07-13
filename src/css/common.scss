@@ -1,0 +1,144 @@
+@use './vars-color.scss' as *;
+@use './respond' as rp;
+@use './root.scss';
+@use './loading-keyframes.scss';
+@use './flex.scss';
+@use './header.scss';
+@use './image.scss';
+@use './text.scss';
+@use './input.scss';
+
+// 全尺寸
+.vvi-full-container {
+  width: 100%;
+  height: 100%;
+}
+
+@for $i from 1 through 10 {
+  $v: #{calc($i * 10)};
+
+  .vvi-box-shadow-light-red-#{$v} {
+    box-shadow: 0 1px 2px rgb(var(--vvi-red-#{$v}-rgb));
+  }
+}
+
+@for $i from 1 through 10 {
+  $v: #{calc($i * 4)};
+
+  // 水平方向的 padding
+  .vvi-padding-horizontal-#{$v} {
+    padding-left: #{$v}px;
+    padding-right: #{$v}px;
+  }
+
+  // 垂直方向的 padding
+  .vvi-padding-vertical-#{$v} {
+    padding-top: #{$v}px;
+    padding-bottom: #{$v}px;
+  }
+
+  // 全方向的 padding 值
+  .vvi-padding-#{$v} {
+    padding: #{$v}px;
+  }
+
+  // 水平方向的 margin
+  .vvi-margin-horizontal-#{$v} {
+    margin-left: #{$v}px;
+    margin-right: #{$v}px;
+  }
+
+  // 垂直方向的 margin
+  .vvi-margin-vertical-#{$v} {
+    margin-top: #{$v}px;
+    margin-bottom: #{$v}px;
+  }
+
+  // 全方向的 margin 值
+  .vvi-margin-#{$v} {
+    margin: #{$v}px;
+  }
+
+  // 圆角
+  .vvi-border-radius-#{$v},
+  .vvi-radius-#{$v} {
+    border-radius: #{$v}px;
+  }
+}
+
+.vvi-inline-block {
+  display: inline-block;
+}
+
+.vvi-relative {
+  position: relative;
+}
+
+.vvi-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.vvi-dust {
+  color: var(---vvi-text-dust);
+}
+
+.vvi-red-bg {
+  background-color: var(--vvi-red-70);
+}
+
+.vvi-float-left {
+  float: left;
+}
+
+.vvi-float-right,
+.vvi-float {
+  float: right;
+}
+
+.vvi-clear-float,
+.vvi-clear {
+  clear: both;
+}
+
+.vvi-loading {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  background-image:
+    radial-gradient(#f00, #f00 50%, transparent 50%, transparent),
+    radial-gradient(#af1, #af1 50%, transparent 50%, transparent),
+    radial-gradient(#0ff, #0ff 50%, transparent 50%, transparent),
+    radial-gradient(#f0f, #f0f 50%, transparent 50%, transparent);
+  background-repeat: no-repeat;
+  animation: 2.4s ease-in-out 0s infinite loading;
+}
+
+// 用户可操作
+.vvi-user-select-text {
+  -khtml-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+
+.vvi-user-select-none {
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.vvi-user-select-all {
+  -khtml-user-select: all;
+  -moz-user-select: all;
+  -ms-user-select: all;
+  user-select: all;
+}
+
+.vvi-cursor-pointer {
+  cursor: pointer;
+}
